@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!--hero section-->
+    <div class="hero-bg">
+      <section class="top">
+        <header>
+          <a href="#">cook.away</a>
+        </header>
+        <h1><span>Amazing recipes</span> at your fingertips</h1>
+        <blockquote>
+          Real food doesn't have ingredients, real food is ingredients.<br />
+          <cite>- Jamie Oliver</cite>
+        </blockquote>
+
+        <!--Recipe search form-->
+        <div class="form-container">
+          <form>
+            <div class="form-left">
+              <label for="city">Search recipe:</label>
+              <input type="text" name="city" id="city" />
+              <p>Example: "pizza"</p>
+            </div>
+            <input type="submit" value="Find Recipe Now" />
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!--Where the filtered results will displayed-->
+
+    <section class="recipe-list meal-result">
+      <div class="container initial">
+        <div id="meal" class="search-result"></div>
+      </div>
+    </section>
+
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
