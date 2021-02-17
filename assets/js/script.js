@@ -15,10 +15,14 @@ searchForm.addEventListener("submit", (e) => {
 
 //An asynchronous function to fetch data from the API
 async function fetchAPI() {
-  const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`;
-  const response = await fetch(baseURL);
-  const data = await response.json();
-  generateHTML(data.hits);
+  try {
+    const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`;
+    const response = await fetch(baseURL);
+    const data = await response.json();
+    generateHTML(data.hits);
+  } catch (e) {
+    console.log("error");
+  }
 }
 
 //Generate the markup for data received from the API
